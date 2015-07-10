@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "easel.js graphics tiny API for PIXI.js.",
   "author": "Grey Rook Entertainment",
-  "main": "./src/index.js",
+  "main": "./PIXI_tiny.js",
   "homepage": "https://github.com/GreyRook/PIXI_tiny",
   "bugs": "https://github.com/GreyRook/PIXI_tiny/issues",
   "license": "MIT",
