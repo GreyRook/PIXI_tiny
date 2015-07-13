@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>pixi.tiny example 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+    </style>
+    <script src="../../lib/pixi.js"></script>
+    <script src="../../PIXI_tiny.js"></script>
+
+</head>
+<body>
+    <script>
+    // create an new instance of a pixi stage
+    var stage = new PIXI.Container();
+
+    // create a renderer instance
+    var renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x6666ff});
+
+    // add the renderer view element to the DOM
+    document.body.appendChild(renderer.view);
+
+    requestAnimationFrame(animate);
+
+    // draw simple rect
+    var gr = new PIXI.Graphics();
+    gr.f(0x000000).r(50, 50, 100, 100).ef();
+    stage.addChild(gr);
+
+    // draw simple line
+    gr = new PIXI.Graphics();
+    gr.ss(2).s(0xffbbbb).mt(200, 50).lt(300, 150);
+    stage.addChild(gr);
+
+    function animate() {
+        requestAnimationFrame(animate);
+
+        // render the stage
+        renderer.render(stage);
+    }
+    </script>
+
+    </body>
+</html>

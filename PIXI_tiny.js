@@ -11,6 +11,18 @@ PIXI.Graphics.prototype.mt = function (x, y) {
 };
 
 /**
+ * Tiny API for PIXI.Graphics.prototype.lineTo
+ *
+ * @param {number} x - end x-coordinate of line
+ * @param {number} y - end y-coordinate of line
+ * @returns {object} - The PIXI.Graphics object
+ */
+PIXI.Graphics.prototype.lt = function (x, y) {
+    this.lineTo(x, y);
+    return this;
+};
+
+/**
  * Tiny API to set linewidth
  *
  * @param {number} linewidth - The desired line width in pixel
@@ -103,6 +115,17 @@ PIXI.Graphics.prototype.f = function (color, alpha) {
     if (alpha == null) {
         alpha = 1;
     }
+    this.beginFill(color, alpha);
+    return this;
+};
+
+
+/**
+ * Tiny API for PIXI.Graphics.prototype.beginFill
+ *
+ * @returns {object} - The PIXI.Graphics object
+ */
+PIXI.Graphics.prototype.f = function (color, alpha) {
     this.beginFill(color, alpha);
     return this;
 };
